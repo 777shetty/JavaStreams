@@ -29,6 +29,8 @@ public class JavaStreamsMain {
 				.filter(isEvenFunction)
 				.collect(Collectors.toList());
 		System.out.println("Even number list is: "+evenStreamList1);
+		 System.out.println("average of list is " + average.getAsDouble());
+
 
 		Integer firstEvenNumber=myNumberList.stream()
 				.filter(isEvenFunction)
@@ -56,5 +58,10 @@ public class JavaStreamsMain {
 				.anyMatch(isEvenFunction);
 
         System.out.println("\nIs any even: " + isAnyEven);
+        boolean isAllEven = myNumberList.stream()
+				.filter(isEvenFunction)
+				.allMatch(isEvenFunction);
+
+        System.out.println("Is all even :" + isAllEven + "\nIs any even: " + isAnyEven);
 	}
 }
