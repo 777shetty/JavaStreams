@@ -29,6 +29,16 @@ public class JavaStreamsMain {
 				.findFirst()
 				.orElse(null);
 		System.out.println("The first even number is :"+firstEvenNumber);
+		Integer minEvenNumber=myNumberList.stream()
+				.filter(isEvenFunction)
+				.min(Integer::compare).orElse(null);
+		System.out.println("Minimum even number is: "+minEvenNumber);
+
+		Integer maxEvenNumber = myNumberList.stream()
+				.filter(isEvenFunction)
+				.max(Integer::compare)
+				.orElse(null);
+		System.out.println("Maximum even number is: "+maxEvenNumber);
 	}
 
 }
