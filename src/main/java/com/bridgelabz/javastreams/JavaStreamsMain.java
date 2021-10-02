@@ -63,5 +63,9 @@ public class JavaStreamsMain {
 				.allMatch(isEvenFunction);
 
         System.out.println("Is all even :" + isAllEven + "\nIs any even: " + isAnyEven);
+        List<Integer> sortedList = myNumberList.stream()
+				.sorted()
+				.collect(Collectors.toList());
+		System.out.println("List after sorting is: " + sortedList);
 	}
 }
